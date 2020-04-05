@@ -19,14 +19,13 @@
       aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-
     <div class="collapse navbar-collapse" id="navbarColor03">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+        <li class="nav-item">
+          <a class="nav-link" href="#" data-toggle="modal" data-target="#exampleModalCenter">Settings</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#settings">Settings</a>
+          <a class="nav-link" href="#" data-toggle="modal" data-target="#about">About</a>
         </li>
       </ul>
     </div>
@@ -42,6 +41,63 @@
       <audio id=" alarm" src="alarm.mp3" preload="auto"></audio>
     </div>
   </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="about" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">What is Pomodoro Technique</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>The Pomodoro technique was created by Francesco Cirillo as a way to get more done in less time. If used
+            properly you will instantly see results in your productivity.</p>
+
+          <p>There are 6 steps in the Pomodoro Technique:</p>
+          <ol>
+            <li>Choose a task.</li>
+            <li>Set a timer for 25 minutes.</li>
+            <li>Work in the task until the timer rings.</li>
+            <li>When the timer rings, put a check mark on paper.</li>
+            <li>Take a 5 min break.</li>
+            <li>Every 4 cycles of this take a longer 20 to 30 minute break.</li>
+          </ol>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
   <script src="main.js" charset="utf-8"></script>
 
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
