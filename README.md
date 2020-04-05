@@ -9,7 +9,7 @@ Simple Pomodoro timer written in javaScript.
   - Every four pomodoros take a long break.
 - Improve UI
   - Better timer alerts
-- Timer in tab/title
+- Timer in tab/title - done
 - Add todo list
 - Total pomodoro counter/goal
 - Keyboard shortcuts

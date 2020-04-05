@@ -55,6 +55,7 @@ let timer = {
     if (minutes.length < 2) { minutes = "0" + minutes };
     if (seconds.length < 2) { seconds = "0" + seconds };
     document.getElementById("timer").innerHTML = minutes + ":" + seconds;
+    document.getElementById("tab-timer").innerHTML = minutes + ":" + seconds + " - Pomodoro Timer";
   },
   displayBreak: function () {
     var minutes = Math.floor(this.breakTime / 60);
@@ -64,6 +65,7 @@ let timer = {
     if (minutes.length < 2) { minutes = "0" + minutes };
     if (seconds.length < 2) { seconds = "0" + seconds };
     document.getElementById("timer").innerHTML = minutes + ":" + seconds;
+    document.getElementById("tab-timer").innerHTML = minutes + ":" + seconds + " - Pomodoro Timer";;
   },
   playSound: function() {
     document.getElementById('alarm').play();
