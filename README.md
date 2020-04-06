@@ -18,6 +18,8 @@ There are 6 steps in the Pomodoro Technique:
 ## Future Plans
 
 - Push notifications
+- Animate progress bar
+  -increase width style according to timer length
 - Change timer settings short break/long break
   - Every four pomodoro cycles take a long break.
 - Improve UI
