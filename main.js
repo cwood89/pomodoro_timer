@@ -111,7 +111,8 @@ function addTodo(text) {
   };
 
   todoItems.push(todo);
-
+  const emptyMessage = document.querySelector("#empty");
+  emptyMessage.remove();
   const list = document.querySelector('#todo-list');
 
   list.insertAdjacentHTML('afterbegin', `
