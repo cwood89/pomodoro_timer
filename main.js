@@ -121,7 +121,7 @@ function addTodo(text) {
     <span onClick="complete('${todo.id}')" class="badge badge-success badge-pill hover">
       <i class="fa fa-check"></i>
     </span>
-    <span onClick="delete('${todo.id}')" class="badge badge-danger badge-pill hover">
+    <span onClick="deleteTodo('${todo.id}')" class="badge badge-danger badge-pill hover">
       <i class="fa fa-times"></i>
     </span>
   </span>
@@ -158,5 +158,10 @@ function complete(id) {
     item.classList.remove("done")
   }
   
-  console.log(item);
+};
+
+function deleteTodo(id) {
+  todoItems = todoItems.filter(item => item.id !== Number(id));
+  const item = document.querySelector(`[data-key='${id}']`);
+  item.remove();
 }
