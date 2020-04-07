@@ -1,4 +1,3 @@
-
 let timer = {
   //changed time limit for testing
   timeLeft: 10, // 25 minutes in seconds = 1500
@@ -20,7 +19,7 @@ let timer = {
     let self = this;
     this.timeCounter = setInterval(function() {
       self.timeLeft--;
-      self.displayTime();
+      self.displayTime(self.timeLeft);
       if (self.timeLeft === 0) {
         self.totalPomodoros++;
         self.toggleTime();
@@ -43,7 +42,7 @@ let timer = {
      }
     this.breakCounter = setInterval(function () {
       breakTime--;
-      self.displayBreak();
+      self.displayTime(breakTime);
       if (breakTime === 0) {
         self.playSound();
         alert("Break over!");
@@ -62,21 +61,11 @@ let timer = {
     this.timeLeft = 1500;
     this.shortBreakTime = 300;
     this.longBreakTime = 1200;
-    this.displayTime();
+    this.displayTime(this.timeLeft);
   },
-  displayTime: function () {
-    var minutes = Math.floor(this.timeLeft / 60);
-    var seconds = this.timeLeft - minutes * 60;
-    seconds = seconds.toString();
-    minutes = minutes.toString();
-    if (minutes.length < 2) { minutes = "0" + minutes };
-    if (seconds.length < 2) { seconds = "0" + seconds };
-    document.getElementById("timer").innerHTML = minutes + ":" + seconds;
-    document.getElementById("tab-timer").innerHTML = minutes + ":" + seconds + " - Pomodoro Timer";
-  },
-  displayBreak: function () {
-    var minutes = Math.floor(this.shortBreakTime / 60);
-    var seconds = this.shortBreakTime - minutes * 60;
+  displayTime: function (time) {
+    var minutes = Math.floor(time / 60);
+    var seconds = time - minutes * 60;
     seconds = seconds.toString();
     minutes = minutes.toString();
     if (minutes.length < 2) { minutes = "0" + minutes };
@@ -88,18 +77,7 @@ let timer = {
     document.getElementById('alarm').play();
  }
 }
-timer.displayTime();
-
-// document.querySelector("#title") // uses css selectors
-// Show an unordered list of todo's
-// • Show an input to enter a new todo
-// • Show a button to add a todo. When the button is clicked:
-// • The text from the input box is used to add a list item to the
-// bottom of the list
-// • The text from the input box is cleared out.
-// • When the user clicks on a list item, it is removed
-// • Extra Credit: - When a list item is clicked, cross it out,
-// then remove it after 1 second.
+timer.displayTime(timer.timeLeft);
 
 let todoItems = [];
 
